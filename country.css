@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jersey+20&family=Lexend+Deca:wght@100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@400;500&display=swap');
+
+
+*{
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.top{
+    z-index: 10;
+    display: none;
+    position: fixed;
+    left: 30vw;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px;
+}
+.close{
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.top img{
+    height: 10rem;
+}
+.top-one{
+    display: flex;
+    border-bottom: 2px solid gray;
+    padding:0 1.5rem;
+}
+
+.top-two{
+    display: flex;
+    margin: 1rem;
+}
+.top-two-in{
+    margin: 0 1rem;
+}
+.overlay{
+    display: none;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    position: fixed;
+    height: 100vh;
+    z-index: 5;
+}
+
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: cadetblue;
+}
+.container {
+    display: grid;
+   grid-template-columns: repeat(3,33.3%);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+.cards{
+    border: 2px solid rgb(156, 149, 149);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(119, 222, 236),white);
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px;
+}
+.cards:hover{
+    border-color: rgb(76, 68, 68);
+}
+.cards img{
+    width: 10rem;
+    height: 5rem;
+}
+ p{
+    font-weight: bold;
+    color: black;
+}
+ span{
+    color: gray;
+}
+.btn{
+    background: rgb(244, 30, 80);
+    color: white;
+    border: none;
+    padding:0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cards h2{
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid lightgrey;
+    background: lightblue;
+    margin: 0;
+    padding: 1rem;
+}
+.top-one h2 span{
+    color:blue;
+}
+
+
+@media (max-width:60rem) {
+    .container{
+        grid-template-columns: repeat(1,100%);
+    }
+    .top{
+        left: 20vw;
+    }
+    .top-two{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .top-two img{
+        height: 15rem;
+    }
+}
+
+@media (max-width:40rem) {
+    .top{
+        left: 10%;
+    }
+}
+@media (max-width:30rem) {
+    .top{
+        left: 0;
+        width: 100%;
+    }
+}
